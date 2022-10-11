@@ -4,10 +4,24 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+const Container = () => {
+
+
+  return (
+  <BrowserRoutes>
+    <Routes>
+      <Route path="/" element={<App />} >
+        <Route path="home-page" element={<Homepage />}/>
+      </Route>
+    </Routes>
+  </BrowserRoutes>
+  )
+}
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <Container />
   </React.StrictMode>
 );
 
