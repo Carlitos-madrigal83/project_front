@@ -13,6 +13,9 @@ const Container = () => {
     <BrowserRouter>
     <Routes>
       <Route path="/" element={<App />} >
+      <Route path="home-page" element={<p>Esto esta dentro de la ruta</p>}/>
+
+        
       </Route>
 
     </Routes>
