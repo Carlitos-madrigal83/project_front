@@ -4,22 +4,25 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Context from './store';
 
 const Container = () => {
-  
+
   //<Route path="home-page" element={<Homepage />}/>
-  
+
   return (
-    <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<App />} >
-      <Route path="home-page" element={<p>Esto esta dentro de la ruta</p>}/>
+    <Context.Provider value={{}}>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<App />} >
+            <Route path="home-page" element={<p>Esto esta dentro de la ruta</p>} />
 
-        
-      </Route>
 
-    </Routes>
-  </BrowserRouter>
+          </Route>
+
+        </Routes>
+      </BrowserRouter>
+    </Context.Provider>
   )
 }
 
@@ -27,7 +30,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Container />
-    
+
   </React.StrictMode>
 );
 
