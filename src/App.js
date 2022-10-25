@@ -17,3 +17,6 @@ function App() {
 }
 
 export default App;
+
+//Deberes:
+//Leer y entender lo que hay en la carpetas store (context), hooks y services (servicios en si)
